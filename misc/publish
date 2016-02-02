@@ -33,7 +33,6 @@ git commit -m "docs(CHANGELOG): $version"
 
 # git tag
 npm version $version -m "chore(release): %s"
-git tag $version
 
 # release 
 git push --follow-tags
