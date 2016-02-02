@@ -1,7 +1,7 @@
 {
   "name": "lambda-put-permission",
   "description": "adds or updates(= deletes & adds) permission of AWS Lambda's function",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js",
