@@ -1,8 +1,22 @@
 # lambda-put-permission
 
-## Usage
-
 adds or updates(= deletes & adds) permission of AWS Lambda's function
+
+```
++---------+      +-----+      +-----------+      +-----+      +--------------+      +-----------+
++ exists? + -+-> + yes + ---> + has diff? + -+-> + yes + ---> + removePolicy + -+-> + addPolicy +
++---------+  |   +-----+      +-----------+  |   +-----+      +--------------+  |   +-----------+
+             |                               |                                  |
+             |                               |   +-----+      +------+          |
+             |                               +-> + no  + ---> + noop +          |
+             |                                   +-----+      +------+          |
+             |                                                                  |
+             |   +-----+                                                        |
+             +-> + no  + -------------------------------------------------------+
+                 +-----+
+```
+
+## Usage
 
 ```javascript
 var AWS = require('aws-sdk');
